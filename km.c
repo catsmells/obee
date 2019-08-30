@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <termios.h>
@@ -16,6 +17,12 @@ void enableRawMode(){
 int main(){
   enableRawMode();
   char c;
-  while(read(STDIN_FILENO,&c,1)==1&&c!='q'); //q to quit
+  while(read(STDIN_FILENO,&c,1)==1&&c!='q'){
+    if(iscntrl(c)){
+      printf("%d\n",c);
+    }else{
+      printf("%d('%c')\n",c,c);
+    }
+  }//q to quit
   return(0);
 }
