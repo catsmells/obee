@@ -1,5 +1,5 @@
 # obee
-A text editor for the practical man.
+A text editor for the practical man or woman.
 
 ## TODO
 - making it sub-350 lines
