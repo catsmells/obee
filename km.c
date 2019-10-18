@@ -54,16 +54,16 @@ struct cHO E;
 void xxxE(const char *fmt,...);
 void xxxR();
 char *xxxP(char *prompt);
-void hotbitchinnarks(const char *s){
+void rtVbw(const char *s){
   write(STDOUT_FILENO,"\x1b[2J",4);
   write(STDOUT_FILENO,"\x1b[H",3);
   perror(s);
   exit(1);
 }void cccR(){
   if(tcsetattr(STDIN_FILENO,TCSAFLUSH,&E.orig_termios)==-1)
-    hotbitchinnarks("tcsetattr");
+    rtVbw("tcsetattr");
 }void xccR(){
-  if(tcgetattr(STDIN_FILENO,&E.orig_termios)==-1)hotbitchinnarks("tcgetattr");
+  if(tcgetattr(STDIN_FILENO,&E.orig_termios)==-1)rtVbw("tcgetattr");
   atexit(cccR);
   struct termios raw=E.orig_termios;
   raw.c_iflag&=~(BRKINT|ICRNL|INPCK|ISTRIP|IXON);
@@ -72,12 +72,12 @@ void hotbitchinnarks(const char *s){
   raw.c_lflag&=~(ECHO|ICANON|IEXTEN|ISIG);
   raw.c_cc[VMIN]=0;
   raw.c_cc[VTIME]=1;
-  if(tcsetattr(STDIN_FILENO,TCSAFLUSH,&raw)==-1)hotbitchinnarks("tcsetattr");
+  if(tcsetattr(STDIN_FILENO,TCSAFLUSH,&raw)==-1)rtVbw("tcsetattr");
 }int rennmS(){
   int nread;
   char c;
   while((nread=read(STDIN_FILENO,&c,1))!=1){
-    if(nread==-1&&errno!=EAGAIN)hotbitchinnarks("read");
+    if(nread==-1&&errno!=EAGAIN)rtVbw("read");
   }if(c=='\x1b'){
     char seq[3];
     if(read(STDIN_FILENO,&seq[0],1)!=1)return('\x1b');
@@ -235,7 +235,7 @@ void hotbitchinnarks(const char *s){
     insDe(E.rtpM);
     E.rtpM--;
   }
-}char *editorRowsToString(int *buflen){
+}char *erXXw(int *buflen){
   int totlen=0;
   int j;
   for(j=0;j<E.rNz;j++)
@@ -253,7 +253,7 @@ void hotbitchinnarks(const char *s){
   free(E.filename);
   E.filename=strdup(filename);
   FILE *fp=fopen(filename,"r");
-  if(!fp)hotbitchinnarks("fopen");
+  if(!fp)rtVbw("fopen");
   char *line=NULL;
   size_t linecap=0;
   ssize_t linelen;
@@ -272,7 +272,7 @@ void hotbitchinnarks(const char *s){
       return;
     }
   }int len;
-  char *buf=editorRowsToString(&len);
+  char *buf=erXXw(&len);
   int fd=open(E.filename,O_RDWR|O_CREAT,0644);
   if(fd!=-1){
     if(ftruncate(fd,len)!=-1){
@@ -285,7 +285,7 @@ void hotbitchinnarks(const char *s){
       }
     }close(fd);
   }free(buf);
-  xxxE("Are you retarded? You can't save that. Here's why: %s", strerror(errno));
+  xxxE("You can't save that. Here's why: %s", strerror(errno));
 }struct xbN{
   char *b;
   int len;
@@ -512,7 +512,7 @@ void rrrWv(struct xbN *ab,const char *s,int len){
   E.filename=NULL;
   E.srT[0]='\0';
   E.srT_time=0;
-  if(wsv(&E.rTz,&E.cTz)==-1)hotbitchinnarks("wsv");
+  if(wsv(&E.rTz,&E.cTz)==-1)rtVbw("wsv");
   E.rTz-=2;
 }int main(int argc, char *argv[]){
   xccR();
