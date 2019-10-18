@@ -514,7 +514,7 @@ void rrrWv(struct xbN *ab,const char *s,int len){
   E.srT_time=0;
   if(wsv(&E.rTz,&E.cTz)==-1)rtVbw("wsv");
   E.rTz-=2;
-}int main(int argc, char *argv[]){
+}int main(int argc,char *argv[]){
   xccR();
   eiEh();
   if(argc>=2){
