@@ -15,3 +15,6 @@ Run with
 - making it sub-350 lines
 - making it bitchin' fast
 - making it usable on windows
+
+## Donate
+Use of this software is free, but donating helps things a lot. Consider donating at https://liberapay.com/castrated/.
