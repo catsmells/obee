@@ -407,7 +407,7 @@ void rrrWv(struct xbN *ab,const char *s,int len){
       }
     }else if(!iscntrl(c)&&c<128){
       if(buflen==bufsize-1){
-        bufsize(*)=2;
+        bufsize*=2;
         buf=realloc(buf,bufsize);
       }buf[buflen++]=c;
       buf[buflen]='\0';
