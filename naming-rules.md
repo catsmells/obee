@@ -41,3 +41,79 @@ Here, I'm going to make it easier on you fellas. May open a wiki later. For even
 **reWM**: Graphical placeholder control.
 
 **sEq**: Status and error return for humans.
+
+**pOP**: Edit feature for sEq.
+
+**pOQ**: Constant refresh control.
+
+**lwX**: Sequential time control.
+
+**tEvC**: Self-contained editor control.
+
+**mNb**: Secondary container control.
+
+**dAz**: Formatting cripple controller.
+
+**dAq**: Formatting revive controller.
+
+**mWt**: Key response select.
+
+**mKu**: Read negation control.
+
+**xWr**: Graphical cursor location device (GCLD).
+
+**pOu**: Dimension auto-adjust control.
+
+**crTe**: Row location controller.
+
+**rCvW**: I/O update controller.
+
+**beerM**: Insurance for tabs.
+
+**nRn**: Adder for new rows.
+
+**fRw**: Row freer-upper.
+
+**pqW**: Row deletion controller.
+
+**rIc**: Adder for new char shit on rows.
+
+**aPd**: String-on-row orgy controller.
+
+**rcDr**: Universal row deletion module (URDM).
+
+**pOG**: Character inserter.
+
+**nLI**: Newline thing.
+
+**tRe**: Character holocaust module (CHM).
+
+left place at r238
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
