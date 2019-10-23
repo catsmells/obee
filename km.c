@@ -35,7 +35,7 @@ typedef struct xvB{
   char *chars;
   char *render;
 }xvB;
-struct lCc {
+struct lCc{
   int nW,nC;
   int pPv;
   int fRc;
