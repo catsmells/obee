@@ -285,7 +285,7 @@ void mNb(const char *s){
     }close(fd);
   }free(buf);
   pOP("Nice job, artard. If you save that, you'll get an I/O error.: %s",strerror(errno));
-}void editorFind(){
+}void nHg(){
   char *mApW=tEvC("AMBER ALERT - Looking for: %s.");
   if(mApW==NULL)return;
   int i;
