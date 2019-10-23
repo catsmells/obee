@@ -88,8 +88,51 @@ Here, I'm going to make it easier on you fellas. May open a wiki later. For even
 
 **tRe**: Character holocaust module (CHM).
 
-left place at r238
+**hRe**: OBEE row/string relations manager.
 
+**eRcV**: Function that checks if OBEE is open or not.
+
+**pPm**: OBEE saving controller.
+
+**uRyC**: Amber Alert function controller.
+
+**mApW**: Amber Alert main control.
+
+**jOt**: Buffer control.
+
+**jRt**: Buffer append control.
+
+**mexMaid**: Buffer cleaner-upper.
+
+**tRa**: Scroll shortcut control.
+
+**gTe**: Row auto-generator.
+
+**yYu**: Fill control.
+
+**suh**: Device greeter prompt.
+
+**tAm**: Auto-padding per CLI config.
+
+**hSb**: Controller for the status bar.
+
+**rrO**: Detail monitor for the status bar.
+
+**rrrO**: Secondary detail monitor for the status bar.
+
+**gBrM**: Generator for response section.
+
+**uuuQ**: Machine response character length monitor.
+
+**eMCi**: Chain point controller.
+
+**kpAo**: Key registration control.
+
+**qRtF**: Quit function number net.
+
+**nTrX**: Key net counter.
+
+**iOp**: OBEE booter-upper.
 
 
 
