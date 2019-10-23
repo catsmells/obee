@@ -56,6 +56,8 @@ Here, I'm going to make it easier on you fellas. May open a wiki later. For even
 
 **dAq**: Formatting revive controller.
 
+**nHg**: Amber Alert main controller.
+
 **mWt**: Key response select.
 
 **mKu**: Read negation control.
