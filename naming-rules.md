@@ -6,9 +6,9 @@ As you can tell, I have the world's most convoluted naming scheme going, and I'd
 - The scheme is to make things efficient and logical.
 - The scheme is to make it unreadable to apes that can't fucking read.
 
-Here, I'm going to make it easier on you fellas. May open a wiki later. For even more convolution, I'm going to call the names "tits". Short, easy-to-remember, and not in the slightest sense dirty or offensive.
+Here, I'm going to make it easier on you fellas. May open a wiki later. For even more convolution, I'm going to call the names "Rocks". Short, easy-to-remember, and not in the slightest sense dirty or offensive.
 
-## Tit Definitions
+## Rock Definitions
 
 **OBEERTX**: Version control.
 
