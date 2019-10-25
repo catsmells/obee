@@ -429,25 +429,25 @@ void jRt(struct abuf *ab,const char *s,int len){
 }void eMCi(int key){
   xvB *row=(E.nC>=E.yOr)?NULL:&E.row[E.nC];
   switch(key){
-    case ARROW_LEFT:
+    case(ARROW_LEFT):
       if(E.nW!=0){
         E.nW--;
       }else if(E.nC>(0)){
         E.nC--;
         E.nW = E.row[E.nC].size;
       }break;
-    case ARROW_RIGHT:
+    case(ARROW_RIGHT):
       if(row&&E.nW<row->size){
         E.nW++;
       }else if(row&&E.nW==row->size){
         E.nC++;
         E.nW=(0);
       }break;
-    case ARROW_UP:
+    case(ARROW_UP):
       if(E.nC!=(0)){
         E.nC--;
       }break;
-    case ARROW_DOWN:
+    case(ARROW_DOWN):
       if(E.nC<E.yOr){
         E.nC++;
       }break;
@@ -463,7 +463,7 @@ void jRt(struct abuf *ab,const char *s,int len){
     case '\r':
       nLI();
       break;
-    case CTRL_KEY('q'):
+    case(CTRL_KEY('q')):
       if(E.reWM&&qRtF>(0)){
         pOP("Are you serious? You really wanna quit when there's unsaved files running about? ",qRtF);
         qRtF--;
@@ -472,24 +472,24 @@ void jRt(struct abuf *ab,const char *s,int len){
       write(STDOUT_FILENO,"\x1b[H",(3));
       exit(0);
       break;
-    case CTRL_KEY('s'):
+    case(CTRL_KEY('s')):
       pPm();
       break;
-    case HOME_KEY:
+    case(HOME_KEY):
       E.nW=(0);
       break;
-    case END_KEY:
+    case(END_KEY):
       if(E.nC<E.yOr)
         E.nW=E.row[E.nC].size;
       break;
-    case BACKSPACE:
-    case CTRL_KEY('h'):
-    case DEL_KEY:
+    case(BACKSPACE):
+    case(CTRL_KEY('h')):
+    case(DEL_KEY):
       if(c==DEL_KEY)eMCi(ARROW_RIGHT);
       tRe();
       break;
-    case PAGE_UP:
-    case PAGE_DOWN:{
+    case(PAGE_UP):
+    case(PAGE_DOWN):{
         if(c==PAGE_UP){
           E.nC=E.fRc;
         }else if(c==PAGE_DOWN){
@@ -499,13 +499,13 @@ void jRt(struct abuf *ab,const char *s,int len){
         while(nTrX--)
           eMCi(c==PAGE_UP?ARROW_UP:ARROW_DOWN);
       }break;
-    case ARROW_UP:
-    case ARROW_DOWN:
-    case ARROW_LEFT:
-    case ARROW_RIGHT:
+    case(ARROW_UP):
+    case(ARROW_DOWN):
+    case(ARROW_LEFT):
+    case(ARROW_RIGHT):
       eMCi(c);
       break;
-    case CTRL_KEY('l'):
+    case(CTRL_KEY('l')):
     case '\x1b':
       break;
     default:
