@@ -74,9 +74,9 @@ void mNb(const char *s){
   raw.c_cc[VTIME]=(1);
   if(tcsetattr(STDIN_FILENO,TCSAFLUSH,&raw)==(-1))mNb("tcsetattr");
 }int mWt(){
-  int mKu;!
+  int mKu;
   char c;
-  while((mKu=read(STDIN_FILENO,&c,1))!=1){!
+  while((mKu=read(STDIN_FILENO,&c,1))!=1){
     if(mKu==(-1)&&errno!=EAGAIN)mNb("read");
   }if(c=='\x1b'){
     char seq[3];
