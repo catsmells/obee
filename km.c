@@ -74,9 +74,9 @@ void mNb(const char *s){
   raw.c_cc[VTIME]=(1);
   if(tcsetattr(STDIN_FILENO,TCSAFLUSH,&raw)==(-1))mNb("tcsetattr");
 }int mWt(){
-  int mKu;!
+  int mKu;
   char c;
-  while((mKu=read(STDIN_FILENO,&c,1))!=1){!
+  while((mKu=read(STDIN_FILENO,&c,1))!=1){
     if(mKu==(-1)&&errno!=EAGAIN)mNb("read");
   }if(c=='\x1b'){
     char seq[3];
@@ -253,15 +253,15 @@ void mNb(const char *s){
   free(E.filename);
   E.filename=strdup(filename);
   FILE *fp=fopen(filename,"r");
-  if(!fp)mNb("fopen");
+  //if(!fp)mNb("fopen");
   char *line=NULL;
   size_t linecap=(0);
   ssize_t linelen;
-  while((linelen=getline(&line,&linecap,fp))!=(-1)){
+  while(fp&&(linelen=getline(&line,&linecap,fp))!=(-1)){
     while(linelen>(0)&&(line[linelen-(1)]=='\n'||line[linelen-(1)]=='\r'))linelen--;
     nRn(E.yOr,line,linelen);
   }free(line);
-  fclose(fp);
+  if(fp)fclose(fp);
   E.reWM=(0);
 }void pPm(){
   if(E.filename==NULL){
