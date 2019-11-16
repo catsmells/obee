@@ -253,16 +253,16 @@ void mNb(const char *s){
   free(E.filename);
   E.filename=strdup(filename);
   FILE *fp=fopen(filename,"r");
-  if(!fp)mNb("fopen");
-  char *line=NULL;
-  size_t linecap=(0);
-  ssize_t linelen;
-  while((linelen=getline(&line,&linecap,fp))!=(-1)){
-    while(linelen>(0)&&(line[linelen-(1)]=='\n'||line[linelen-(1)]=='\r'))linelen--;
-    nRn(E.yOr,line,linelen);
-  }free(line);
-  fclose(fp);
-  E.reWM=(0);
+  if(fp){
+    char *line=NULL;
+    size_t linecap=(0);
+    ssize_t linelen;
+    while((linelen=getline(&line,&linecap,fp))!=(-1)){
+      while(linelen>(0)&&(line[linelen-(1)]=='\n'||line[linelen-(1)]=='\r'))linelen--;
+      nRn(E.yOr,line,linelen);
+    }free(line);
+    fclose(fp);
+  }E.reWM=(0);
 }void pPm(){
   if(E.filename==NULL){
     E.filename=tEvC("You're finna save this shit as %s (ESC to cancel).");
