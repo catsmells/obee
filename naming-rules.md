@@ -10,45 +10,45 @@ Here, I'm going to make it easier on you fellas. May open a wiki later. For even
 
 ## Rock Definitions
 
-**OBEERTX**: Version control.
+**🤭**: Version control.
 
-**qtP**: Tab stop control.
+**😑**: Tab stop control.
 
-**qtM**: OBEE full exit control.
+**🤤**: OBEE full exit control.
 
-**eRv**: Key definer.
+**🤑**: Key definer.
 
-**xvB**: Row controller.
+**🥶**: Row controller.
 
-**lCc**: Configuration controller.
+**😎**: Configuration controller.
 
-**nW**: First point definer.
+**😲**: First point definer.
 
 **nC**: Second point definer.
 
-**pPv**: Third point definer.
+**🤬**: Third point definer.
 
-**fRc**: Row faux controller.
+**💩**: Row faux controller.
 
-**fBc**: Column faux controller.
+**👻**: Column faux controller.
 
-**yTr**: Graphical row controller.
+**🤡**: Graphical row controller.
 
-**yNr**: Graphical column controller.
+**😻**: Graphical column controller.
 
-**yOr**: Graphical numerary control.
+**💖**: Graphical numerary control.
 
-**reWM**: Graphical placeholder control.
+**💯**: Graphical placeholder control.
 
-**sEq**: Status and error return for humans.
+**🤜**: Status and error return for humans.
 
-**pOP**: Edit feature for sEq.
+**👅**: Edit feature for sEq.
 
-**pOQ**: Constant refresh control.
+**🧑‍**: Constant refresh control.
 
-**lwX**: Sequential time control.
+**🧠**: Sequential time control.
 
-**tEvC**: Self-contained editor control.
+**💂**: Self-contained editor control.
 
 **mNb**: Secondary container control.
 
