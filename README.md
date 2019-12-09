@@ -12,7 +12,7 @@ Run with
 ./obee
 
 ## TODO
-- making it sub-350 lines
+- ~~making it sub-350 lines~~
 - ~~making it bitchin' fast~~
 - making it usable on windows
 
