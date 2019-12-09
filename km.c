@@ -115,29 +115,10 @@ void mNb(const char *s){
   }else{
     return(c);
   }
-}int xWr(int *rows,int *cols){
-  char buf[32];
-  unsigned int i=(0);
-  if(write(STDOUT_FILENO,"\x1b[6n",4)!=(4))return(-1);
-  while(i<sizeof(buf)-1){
-    if(read(STDIN_FILENO,&buf[i],1)!=1)break;
-    if(buf[i]=='R')break;
-    i++;
-  }buf[i]='\0';
-  if(buf[0]!='\x1b'||buf[1]!='[')return(-1);
-  if(sscanf(&buf[2],"%d;%d",rows,cols)!=(2))return(-1);
-  return(0);
-}int pOu(int *rows,int *cols){
-  struct winsize ws;
-  if(ioctl(STDOUT_FILENO,TIOCGWINSZ,&ws)==(-1)||ws.ws_col==(0)){
-    if(write(STDOUT_FILENO,"\x1b[999C\x1b[999B",12)!=12)return(-1);
-    return xWr(rows,cols);
-  }else{
+}int xWr(int *rows,int *cols){char buf[32];unsigned int i=(0);if(write(STDOUT_FILENO,"\x1b[6n",4)!=(4))return(-1);while(i<sizeof(buf)-1){if(read(STDIN_FILENO,&buf[i],1)!=1)break;if(buf[i]=='R')break;i++;}buf[i]='\0';if(buf[0]!='\x1b'||buf[1]!='[')return(-1);if(sscanf(&buf[2],"%d;%d",rows,cols)!=(2))return(-1);return(0);}int pOu(int *rows,int *cols){struct winsize ws;if(ioctl(STDOUT_FILENO,TIOCGWINSZ,&ws)==(-1)||ws.ws_col==(0)){if(write(STDOUT_FILENO,"\x1b[999C\x1b[999B",12)!=12)return(-1);return xWr(rows,cols);}else{
     *cols=ws.ws_col;
     *rows=ws.ws_row;
-    return(0);
-  }
-}int crTe(🥶 *row,int 😲){
+    return(0);}}int crTe(🥶 *row,int 😲){
   int 🤬=0;
   int j;
   for(j=0;j<😲;j++){
@@ -263,71 +244,15 @@ void mNb(const char *s){
     }free(line);
     fclose(fp);
   }E.💯=(0);
-}void pPm(){
-  if(E.filename==NULL){
-    E.filename=💂("You're finna save this shit as %s (ESC to cancel).");
-    if(E.filename==NULL){
-      👅("You fucking aborted that save like a prom night baby");
-      return;
-    }
-  }int len;
-  char *buf=hRe(&len);
-  int fd=open(E.filename,O_RDWR|O_CREAT,0644);
-  if(fd!=(-1)){
-    if(ftruncate(fd,len)!=(-1)){
-      if(write(fd,buf,len)==len){
-        close(fd);
-        free(buf);
-        E.💯=(0);
-        👅("OBEE: %d written to the disk.",len);
-        return;
-      }
-    }close(fd);
-  }free(buf);
-  👅("Nice job. If you save that, you'll get an I/O error.: %s",strerror(errno));
-}void nHg(){
-  char *mApW=💂("AMBER ALERT - Looking for: %s.");
-  if(mApW==NULL)return;
-  int i;
-  for(i=0;i<E.💖;i++){
-    🥶 *row=&E.row[i];
-    char *uRyC=strstr(row->render,mApW);
-    if(uRyC){
-      E.nC=i;
-      E.😲=uRyC-row->render;
-      E.💩=E.💖;
-      break;
-    }
-  }free(mApW);
-}struct abuf{
-  char *b;
-  int len;
-};
+}void pPm(){if(E.filename==NULL){E.filename=💂("You're finna save this shit as %s (ESC to cancel).");if(E.filename==NULL){👅("You fucking aborted that save like a prom night baby");return;}}int len;char *buf=hRe(&len);int fd=open(E.filename,O_RDWR|O_CREAT,0644);if(fd!=(-1)){if(ftruncate(fd,len)!=(-1)){if(write(fd,buf,len)==len){close(fd);free(buf);E.💯=(0);👅("OBEE: %d written to the disk.",len);return;}}close(fd);}free(buf);👅("Nice job. If you save that, you'll get an I/O error.: %s",strerror(errno));}void nHg(){char *mApW=💂("AMBER ALERT - Looking for: %s.");if(mApW==NULL)return;int i;for(i=0;i<E.💖;i++){🥶 *row=&E.row[i];char *uRyC=strstr(row->render,mApW);if(uRyC){E.nC=i;E.😲=uRyC-row->render;E.💩=E.💖;break;}}free(mApW);}struct abuf{char *b;int len;};
 #define jOt {NULL,0}
-void jRt(struct abuf *ab,const char *s,int len){
-  char *new=realloc(ab->b,ab->len+len);
-  if(new==NULL)return;
-  memcpy(&new[ab->len],s,len);
-  ab->b=new;
-  ab->len+=len;
-}void mexMaid(struct abuf *ab){
-  free(ab->b);
-}void tRa(){
-  E.🤬=(0);
-  if(E.nC<E.💖){
-    E.🤬=crTe(&E.row[E.nC],E.😲);
-  }if(E.nC<E.💩){
-    E.💩=E.nC;
-  }if(E.nC>=E.💩+E.🤡){
-    E.💩=E.nC-E.🤡+(1);
-  }if(E.🤬<E.👻){
-    E.👻=E.🤬;
-  }if(E.🤬>=E.👻+E.😻){
-    E.👻=E.🤬-E.😻+(1);
-  }
-}void gTe(struct abuf *ab){
-  int y;
-  for(y=(0);y<E.🤡;y++){
+void jRt(struct abuf *ab,const char *s,int len){char *new=realloc(ab->b,ab->len+len);if(new==NULL)return;memcpy(&new[ab->len],s,len);ab->b=new;ab->len+=len;}void mexMaid(struct abuf *ab){free(ab->b);
+}void tRa(){E.🤬=(0);if(E.nC<E.💖){E.🤬=crTe(&E.row[E.nC],E.😲);
+  }if(E.nC<E.💩){E.💩=E.nC;
+  }if(E.nC>=E.💩+E.🤡){E.💩=E.nC-E.🤡+(1);
+  }if(E.🤬<E.👻){E.👻=E.🤬;
+  }if(E.🤬>=E.👻+E.😻){E.👻=E.🤬-E.😻+(1);
+  }}void gTe(struct abuf *ab){int y;for(y=(0);y<E.🤡;y++){
     int yYu=y+E.💩;
     if(yYu>=E.💖){
       if(E.💖==(0)&&y==E.🤡/(3)){
@@ -371,169 +296,4 @@ void jRt(struct abuf *ab,const char *s,int len){
       len++;
     }
   }jRt(ab,"\x1b[m",(3));
-  jRt(ab,"\r\n",(2));
-}void gBrM(struct abuf *ab){
-  jRt(ab,"\x1b[K",(3));
-  int uuuQ=strlen(E.🤜);
-  if(uuuQ>E.😻)uuuQ=E.😻;
-  if(uuuQ&&time(NULL)-E.🧠<(5))
-    jRt(ab,E.🤜,uuuQ);
-}void 🧑‍(){
-  tRa();
-  struct abuf ab=jOt;
-  jRt(&ab,"\x1b[?25l",(6));
-  jRt(&ab,"\x1b[H",(3));
-  gTe(&ab);
-  hSb(&ab);
-  gBrM(&ab);
-  char buf[32];
-  snprintf(buf,sizeof(buf),"\x1b[%d;%dH",(E.nC-E.💩)+(1),(E.🤬-E.👻)+(1));
-  jRt(&ab,buf,strlen(buf));
-  jRt(&ab,"\x1b[?25h",(6));
-  write(STDOUT_FILENO,ab.b,ab.len);
-  mexMaid(&ab);
-}void 👅(const char *fmt,...){
-  va_list ap;
-  va_start(ap,fmt);
-  vsnprintf(E.🤜,sizeof(E.🤜),fmt,ap);
-  va_end(ap);
-  E.🧠=time(NULL);
-}char *💂(char *prompt){
-  size_t bufsize=(128);
-  char *buf=malloc(bufsize);
-  size_t buflen=(0);
-  buf[0]='\0';
-  while(1){
-    👅(prompt,buf);
-    🧑‍();
-    int c=mWt();
-    if(c==DEL_KEY||c==CTRL_KEY('h')||c==BACKSPACE){
-      if(buflen!=0)buf[--buflen]='\0';
-    }else if(c=='\x1b'){
-      👅("");
-      free(buf);
-      return NULL;
-    }else if(c=='\r'){
-      if(buflen!=0){
-        👅("");
-        return(buf);
-      }
-    }else if(!iscntrl(c)&&c<(128)){
-      if(buflen==bufsize-1){
-        bufsize *=(2);
-        buf=realloc(buf,bufsize);
-      }buf[buflen++]=c;
-      buf[buflen]='\0';
-    }
-  }
-}void eMCi(int key){
-  🥶 *row=(E.nC>=E.💖)?NULL:&E.row[E.nC];
-  switch(key){
-    case(ARROW_LEFT):
-      if(E.😲!=0){
-        E.😲--;
-      }else if(E.nC>(0)){
-        E.nC--;
-        E.😲 = E.row[E.nC].size;
-      }break;
-    case(ARROW_RIGHT):
-      if(row&&E.😲<row->size){
-        E.😲++;
-      }else if(row&&E.😲==row->size){
-        E.nC++;
-        E.😲=(0);
-      }break;
-    case(ARROW_UP):
-      if(E.nC!=(0)){
-        E.nC--;
-      }break;
-    case(ARROW_DOWN):
-      if(E.nC<E.💖){
-        E.nC++;
-      }break;
-  }row=(E.nC>=E.💖)?NULL:&E.row[E.nC];
-  int rowlen=row?row->size:(0);
-  if(E.😲>rowlen){
-    E.😲=rowlen;
-  }
-}void kpAo(){
-  static int qRtF=🤤;
-  int c=mWt();
-  switch(c){
-    case '\r':
-      nLI();
-      break;
-    case(CTRL_KEY('q')):
-      if(E.💯&&qRtF>(0)){
-        👅("Are you serious? You really wanna quit when there's unsaved files running about? ",qRtF);
-        qRtF--;
-        return;
-      }write(STDOUT_FILENO,"\x1b[2J",(4));
-      write(STDOUT_FILENO,"\x1b[H",(3));
-      exit(0);
-      break;
-    case(CTRL_KEY('s')):
-      pPm();
-      break;
-    case(HOME_KEY):
-      E.😲=(0);
-      break;
-    case(END_KEY):
-      if(E.nC<E.💖)
-        E.😲=E.row[E.nC].size;
-      break;
-    case(BACKSPACE):
-    case(CTRL_KEY('h')):
-    case(DEL_KEY):
-      if(c==DEL_KEY)eMCi(ARROW_RIGHT);
-      tRe();
-      break;
-    case(PAGE_UP):
-    case(PAGE_DOWN):{
-        if(c==PAGE_UP){
-          E.nC=E.💩;
-        }else if(c==PAGE_DOWN){
-          E.nC=E.💩+E.🤡-(1);
-          if(E.nC>E.💖)E.nC=E.💖;
-        }int nTrX=E.🤡;
-        while(nTrX--)
-          eMCi(c==PAGE_UP?ARROW_UP:ARROW_DOWN);
-      }break;
-    case(ARROW_UP):
-    case(ARROW_DOWN):
-    case(ARROW_LEFT):
-    case(ARROW_RIGHT):
-      eMCi(c);
-      break;
-    case(CTRL_KEY('l')):
-    case '\x1b':
-      break;
-    default:
-      pOG(c);
-      break;
-  }qRtF=🤤;
-}void iOp(){
-  E.😲=(0);
-  E.nC=(0);
-  E.🤬=(0);
-  E.💩=(0);
-  E.👻=(0);
-  E.💖=(0);
-  E.row=(NULL);
-  E.💯=(0);
-  E.filename=(NULL);
-  E.🤜[0]='\0';
-  E.🧠=(0);
-  if(pOu(&E.🤡,&E.😻)==(-1))mNb("pOu");
-  E.🤡-=(2);
-}int main(int argc,char *argv[]){
-  dAq();
-  iOp();
-  if(argc>=(2)){
-    eRcV(argv[1]);
-  }👅("^S to Save, ^Q to Quit, ^F to Search. ");
-  while(1){
-    🧑‍();
-    kpAo();
-  }return(0);
-}
+  jRt(ab,"\r\n",(2));}void gBrM(struct abuf *ab){jRt(ab,"\x1b[K",(3));int uuuQ=strlen(E.🤜);if(uuuQ>E.😻)uuuQ=E.😻;if(uuuQ&&time(NULL)-E.🧠<(5)){jRt(ab,E.🤜,uuuQ);}}void 🧑‍(){tRa();struct abuf ab=jOt;jRt(&ab,"\x1b[?25l",(6));jRt(&ab,"\x1b[H",(3));gTe(&ab);hSb(&ab);gBrM(&ab);char buf[32];snprintf(buf,sizeof(buf),"\x1b[%d;%dH",(E.nC-E.💩)+(1),(E.🤬-E.👻)+(1));jRt(&ab,buf,strlen(buf));jRt(&ab,"\x1b[?25h",(6));write(STDOUT_FILENO,ab.b,ab.len);mexMaid(&ab);}void 👅(const char *fmt,...){va_list ap;va_start(ap,fmt);vsnprintf(E.🤜,sizeof(E.🤜),fmt,ap);va_end(ap);E.🧠=time(NULL);}char *💂(char *prompt){size_t bufsize=(128);char *buf=malloc(bufsize);size_t buflen=(0);buf[0]='\0';while(1){👅(prompt,buf);🧑‍();int c=mWt();if(c==DEL_KEY||c==CTRL_KEY('h')||c==BACKSPACE){if(buflen!=0)buf[--buflen]='\0';}else if(c=='\x1b'){👅("");free(buf);return(NULL);}else if(c=='\r'){if(buflen!=0){👅("");return(buf);}}else if(!iscntrl(c)&&c<(128)){if(buflen==bufsize-1){bufsize *=(2);buf=realloc(buf,bufsize);}buf[buflen++]=c;buf[buflen]='\0';}}}void eMCi(int key){🥶 *row=(E.nC>=E.💖)?NULL:&E.row[E.nC];switch(key){case(ARROW_LEFT):if(E.😲!=0){E.😲--;}else if(E.nC>(0)){E.nC--;E.😲 = E.row[E.nC].size;}break;case(ARROW_RIGHT):if(row&&E.😲<row->size){E.😲++;}else if(row&&E.😲==row->size){E.nC++;E.😲=(0);}break;case(ARROW_UP):if(E.nC!=(0)){E.nC--;}break;case(ARROW_DOWN):if(E.nC<E.💖){E.nC++;}break;}row=(E.nC>=E.💖)?NULL:&E.row[E.nC];int rowlen=row?row->size:(0);if(E.😲>rowlen){E.😲=rowlen;}}void kpAo(){static int qRtF=🤤;int c=mWt();switch(c){case '\r':nLI();break;case(CTRL_KEY('q')):if(E.💯&&qRtF>(0)){👅("Are you serious? You really wanna quit when there's unsaved files running about? ",qRtF);qRtF--;return;}write(STDOUT_FILENO,"\x1b[2J",(4));write(STDOUT_FILENO,"\x1b[H",(3));exit(0);break;case(CTRL_KEY('s')):pPm();break;case(HOME_KEY):E.😲=(0);break;case(END_KEY):if(E.nC<E.💖)E.😲=E.row[E.nC].size;break;case(BACKSPACE):case(CTRL_KEY('h')):case(DEL_KEY):if(c==DEL_KEY)eMCi(ARROW_RIGHT);tRe();break;case(PAGE_UP):case(PAGE_DOWN):{if(c==PAGE_UP){E.nC=E.💩;}else if(c==PAGE_DOWN){E.nC=E.💩+E.🤡-(1);if(E.nC>E.💖)E.nC=E.💖;}int nTrX=E.🤡;while(nTrX--)eMCi(c==PAGE_UP?ARROW_UP:ARROW_DOWN);}break;case(ARROW_UP):case(ARROW_DOWN):case(ARROW_LEFT):case(ARROW_RIGHT):eMCi(c);break;case(CTRL_KEY('l')):case '\x1b':break;default:pOG(c);break;}qRtF=🤤;}void iOp(){E.😲=(0);E.nC=(0);E.🤬=(0);E.💩=(0);E.👻=(0);E.💖=(0);E.row=(NULL);E.💯=(0);E.filename=(NULL);E.🤜[0]='\0';E.🧠=(0);if(pOu(&E.🤡,&E.😻)==(-1))mNb("pOu");E.🤡-=(2);}int main(int argc,char *argv[]){dAq();iOp();if(argc>=(2)){eRcV(argv[1]);}👅("^S to Save, ^Q to Quit, ^F to Search. ");while(1){🧑‍();kpAo();}return(0);}
