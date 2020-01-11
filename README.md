@@ -6,6 +6,10 @@ Clone this repo, then compile using gcc.
 
 $ gcc km.c -o obee
 
+or if on Windows:
+
+$ clang km.c -S -emit-llvm -o - -O3
+
 
 Run with
 
@@ -14,7 +18,7 @@ Run with
 ## TODO
 - ~~making it sub-350 lines~~
 - ~~making it bitchin' fast~~
-- making it usable on windows
+- ~~making it usable on windows~~
 
 ## Donate
 Use of this software is free, but donating helps things a lot. Consider donating at https://liberapay.com/castrated/.
