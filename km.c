@@ -14,7 +14,7 @@
 #include <time.h>
 #include <unistd.h>
 #define 😑 8
-#define 🤭 "0.0.1"
+#define 🤭 "0.1.0"
 #define 🤤 3
 #define CTRL_KEY(k)((k)&0x1f)
 enum 🤑{
