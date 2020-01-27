@@ -258,7 +258,7 @@ void jRt(struct abuf *ab,const char *s,int len){char *new=realloc(ab->b,ab->len+
       if(E.💖==(0)&&y==E.🤡/(3)){
         char suh[120];
         int suhlen=snprintf(suh,sizeof(suh),
-          "OBEE -- v.%s",🤭);
+          "OBEE -- v%s",🤭);
         if(suhlen>E.😻)suhlen=E.😻;
         int tAm=(E.😻-suhlen)/(2);
         if(tAm){
