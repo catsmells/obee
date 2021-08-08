@@ -1,5 +1,5 @@
 # obee
-A text editor for the practical man or woman. Designed to be easier to use than Notepad, but with code more complicated than anything you've seen before.
+A text editor for the practical man. Designed to be easier to use than Notepad, but with code more complicated than anything you've seen before.
 
 ## Installation
 Clone this repo, then compile using gcc.
