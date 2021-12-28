@@ -20,5 +20,4 @@ Run with
 - ~~making it bitchin' fast~~
 - ~~making it usable on windows~~
 
-## Donate
-Use of this software is free, but donating helps things a lot. Consider donating at https://liberapay.com/castrated/.
+Made with love for use of my fellow /bant/ users.
